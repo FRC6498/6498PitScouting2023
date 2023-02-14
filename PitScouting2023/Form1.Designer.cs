@@ -56,7 +56,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmb_TeleCharge = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ckb_Pieces = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,6 +69,7 @@
             this.ofd_Import = new System.Windows.Forms.OpenFileDialog();
             this.sfd_Submit = new System.Windows.Forms.SaveFileDialog();
             this.tmrCheck = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbRobot)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -257,10 +257,15 @@
             // 
             this.cmb_AutoCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_AutoCharge.FormattingEnabled = true;
+            this.cmb_AutoCharge.Items.AddRange(new object[] {
+            "Not Docked",
+            "Docked !& Engaged",
+            "Docked && Engaged"});
             this.cmb_AutoCharge.Location = new System.Drawing.Point(0, 239);
             this.cmb_AutoCharge.Name = "cmb_AutoCharge";
             this.cmb_AutoCharge.Size = new System.Drawing.Size(475, 46);
             this.cmb_AutoCharge.TabIndex = 11;
+            this.cmb_AutoCharge.Text = "Pick One";
             // 
             // label4
             // 
@@ -276,6 +281,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.ckb_InShelf);
             this.panel2.Controls.Add(this.ckb_InFloor);
             this.panel2.Controls.Add(this.ckb_Mid);
@@ -285,7 +291,6 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.cmb_TeleCharge);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.ckb_Pieces);
             this.panel2.Controls.Add(this.label7);
@@ -399,15 +404,6 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Scores:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cmb_TeleCharge
-            // 
-            this.cmb_TeleCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_TeleCharge.FormattingEnabled = true;
-            this.cmb_TeleCharge.Location = new System.Drawing.Point(3, 177);
-            this.cmb_TeleCharge.Name = "cmb_TeleCharge";
-            this.cmb_TeleCharge.Size = new System.Drawing.Size(479, 46);
-            this.cmb_TeleCharge.TabIndex = 15;
             // 
             // label8
             // 
@@ -533,6 +529,20 @@
             this.tmrCheck.Enabled = true;
             this.tmrCheck.Tick += new System.EventHandler(this.tmrCheck_Tick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Not Docked",
+            "Docked !& Engaged",
+            "Docked && Engaged"});
+            this.comboBox1.Location = new System.Drawing.Point(3, 177);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(475, 46);
+            this.comboBox1.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -585,7 +595,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmb_AutoCharge;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmb_TeleCharge;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox ckb_Pieces;
         private System.Windows.Forms.Label label7;
@@ -609,6 +618,7 @@
         private System.Windows.Forms.CheckBox ckb_LEDs;
         private System.Windows.Forms.CheckBox ckb_AI;
         private System.Windows.Forms.Timer tmrCheck;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

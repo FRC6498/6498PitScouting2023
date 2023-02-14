@@ -72,5 +72,10 @@ namespace PitScouting2023
                button1.Enabled = true;
             }
         }
+
+        private void cmb_TeleCharge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
