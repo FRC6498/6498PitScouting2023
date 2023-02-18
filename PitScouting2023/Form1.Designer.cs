@@ -28,597 +28,651 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNumber = new System.Windows.Forms.TextBox();
-            this.cmbMotor = new System.Windows.Forms.ComboBox();
-            this.cmbType = new System.Windows.Forms.ComboBox();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.pbRobot = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ckb_Community = new System.Windows.Forms.CheckBox();
-            this.ckb_Floor = new System.Windows.Forms.CheckBox();
-            this.ckb_Preloaded = new System.Windows.Forms.CheckBox();
-            this.txt_AutoNotes = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmb_AutoCharge = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ckb_InShelf = new System.Windows.Forms.CheckBox();
-            this.ckb_InFloor = new System.Windows.Forms.CheckBox();
-            this.ckb_Mid = new System.Windows.Forms.CheckBox();
-            this.ckb_Low = new System.Windows.Forms.CheckBox();
-            this.ckb_High = new System.Windows.Forms.CheckBox();
-            this.txt_TeleOpNotes = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.ckb_Pieces = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.ckb_LEDs = new System.Windows.Forms.CheckBox();
-            this.ckb_AI = new System.Windows.Forms.CheckBox();
-            this.txt_OtherNotes = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lbl_Info_TeamNumber = new System.Windows.Forms.Label();
+            this.lbl_Info_DtType = new System.Windows.Forms.Label();
+            this.lbl_Info_DtMotor = new System.Windows.Forms.Label();
+            this.tb_Info_TeamNumber = new System.Windows.Forms.TextBox();
+            this.cmb_Info_DtMotor = new System.Windows.Forms.ComboBox();
+            this.cmb_Info_DtType = new System.Windows.Forms.ComboBox();
+            this.btn_Display_Import = new System.Windows.Forms.Button();
+            this.pb_Display_Robot = new System.Windows.Forms.PictureBox();
+            this.pnl_Auto = new System.Windows.Forms.Panel();
+            this.lbl_Auto_Name = new System.Windows.Forms.Label();
+            this.ckb_Auto_Preloaded = new System.Windows.Forms.CheckBox();
+            this.ckb_Auto_Floor = new System.Windows.Forms.CheckBox();
+            this.ckb_Auto_Community = new System.Windows.Forms.CheckBox();
+            this.lbl_Auto_Station = new System.Windows.Forms.Label();
+            this.cmb_Auto_Station = new System.Windows.Forms.ComboBox();
+            this.lbl_Auto_Notes = new System.Windows.Forms.Label();
+            this.tb_Auto_Notes = new System.Windows.Forms.TextBox();
+            this.pnl_TeleOp = new System.Windows.Forms.Panel();
+            this.lbl_TeleOp_Name = new System.Windows.Forms.Label();
+            this.ckb_TeleOp_Pieces = new System.Windows.Forms.CheckBox();
+            this.lbl_TeleOp_Station = new System.Windows.Forms.Label();
+            this.cmb_TeleOp_Station = new System.Windows.Forms.ComboBox();
+            this.lbl_TeleOp_Scores = new System.Windows.Forms.Label();
+            this.ckb_TeleOp_High = new System.Windows.Forms.CheckBox();
+            this.ckb_TeleOp_Mid = new System.Windows.Forms.CheckBox();
+            this.ckb_TeleOp_Low = new System.Windows.Forms.CheckBox();
+            this.lbl_TeleOp_Intake = new System.Windows.Forms.Label();
+            this.ckb_TeleOp_InFloor = new System.Windows.Forms.CheckBox();
+            this.ckb_TeleOp_InShelf = new System.Windows.Forms.CheckBox();
+            this.lbl_TeleOp_Notes = new System.Windows.Forms.Label();
+            this.tb_TeleOp_Notes = new System.Windows.Forms.TextBox();
+            this.pnl_OtherInfo = new System.Windows.Forms.Panel();
+            this.lbl_OtherInfo_Name = new System.Windows.Forms.Label();
+            this.ckb_OtherInfo_AI = new System.Windows.Forms.CheckBox();
+            this.ckb_OtherInfo_LEDs = new System.Windows.Forms.CheckBox();
+            this.lbl_OtherInfo_Notes = new System.Windows.Forms.Label();
+            this.tb_OtherInfo_Notes = new System.Windows.Forms.TextBox();
+            this.btn_Display_Submit = new System.Windows.Forms.Button();
             this.ofd_Import = new System.Windows.Forms.OpenFileDialog();
             this.sfd_Submit = new System.Windows.Forms.SaveFileDialog();
-            this.tmrCheck = new System.Windows.Forms.Timer(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRobot)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnl_Info = new System.Windows.Forms.Panel();
+            this.pnl_Display = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Display_Robot)).BeginInit();
+            this.pnl_Auto.SuspendLayout();
+            this.pnl_TeleOp.SuspendLayout();
+            this.pnl_OtherInfo.SuspendLayout();
+            this.pnl_Info.SuspendLayout();
+            this.pnl_Display.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_Info_TeamNumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Team Number:";
+            this.lbl_Info_TeamNumber.AutoSize = true;
+            this.lbl_Info_TeamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Info_TeamNumber.Location = new System.Drawing.Point(5, 8);
+            this.lbl_Info_TeamNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Info_TeamNumber.Name = "lbl_Info_TeamNumber";
+            this.lbl_Info_TeamNumber.Size = new System.Drawing.Size(194, 31);
+            this.lbl_Info_TeamNumber.TabIndex = 0;
+            this.lbl_Info_TeamNumber.Text = "Team Number:";
             // 
-            // label2
+            // lbl_Info_DtType
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 39);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Drivetrain Type:";
+            this.lbl_Info_DtType.AutoSize = true;
+            this.lbl_Info_DtType.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Info_DtType.Location = new System.Drawing.Point(5, 54);
+            this.lbl_Info_DtType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Info_DtType.Name = "lbl_Info_DtType";
+            this.lbl_Info_DtType.Size = new System.Drawing.Size(207, 31);
+            this.lbl_Info_DtType.TabIndex = 1;
+            this.lbl_Info_DtType.Text = "Drivetrain Type:";
             // 
-            // label3
+            // lbl_Info_DtMotor
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(267, 39);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Drivetrain Motor:";
+            this.lbl_Info_DtMotor.AutoSize = true;
+            this.lbl_Info_DtMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Info_DtMotor.Location = new System.Drawing.Point(5, 96);
+            this.lbl_Info_DtMotor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Info_DtMotor.Name = "lbl_Info_DtMotor";
+            this.lbl_Info_DtMotor.Size = new System.Drawing.Size(215, 31);
+            this.lbl_Info_DtMotor.TabIndex = 2;
+            this.lbl_Info_DtMotor.Text = "Drivetrain Motor:";
             // 
-            // txtNumber
+            // tb_Info_TeamNumber
             // 
-            this.txtNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(298, 15);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(121, 45);
-            this.txtNumber.TabIndex = 3;
-            this.txtNumber.Text = "6498";
+            this.tb_Info_TeamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Info_TeamNumber.Location = new System.Drawing.Point(220, 8);
+            this.tb_Info_TeamNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Info_TeamNumber.Name = "tb_Info_TeamNumber";
+            this.tb_Info_TeamNumber.Size = new System.Drawing.Size(92, 35);
+            this.tb_Info_TeamNumber.TabIndex = 3;
+            this.tb_Info_TeamNumber.Text = "6498";
+            this.tb_Info_TeamNumber.TextChanged += new System.EventHandler(this.btn_Display_Submit_Validate);
             // 
-            // cmbMotor
+            // cmb_Info_DtMotor
             // 
-            this.cmbMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMotor.FormattingEnabled = true;
-            this.cmbMotor.Items.AddRange(new object[] {
+            this.cmb_Info_DtMotor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Info_DtMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Info_DtMotor.FormattingEnabled = true;
+            this.cmb_Info_DtMotor.Items.AddRange(new object[] {
             "Red Line",
             "Falcon",
             "Neo",
             "CIM",
             "Other"});
-            this.cmbMotor.Location = new System.Drawing.Point(298, 115);
-            this.cmbMotor.Name = "cmbMotor";
-            this.cmbMotor.Size = new System.Drawing.Size(199, 46);
-            this.cmbMotor.TabIndex = 4;
-            this.cmbMotor.Text = "Pick One";
+            this.cmb_Info_DtMotor.Location = new System.Drawing.Point(220, 93);
+            this.cmb_Info_DtMotor.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Info_DtMotor.Name = "cmb_Info_DtMotor";
+            this.cmb_Info_DtMotor.Size = new System.Drawing.Size(142, 37);
+            this.cmb_Info_DtMotor.TabIndex = 4;
+            this.cmb_Info_DtMotor.SelectedIndexChanged += new System.EventHandler(this.btn_Display_Submit_Validate);
             // 
-            // cmbType
+            // cmb_Info_DtType
             // 
-            this.cmbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Items.AddRange(new object[] {
+            this.cmb_Info_DtType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Info_DtType.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Info_DtType.FormattingEnabled = true;
+            this.cmb_Info_DtType.Items.AddRange(new object[] {
             "Tank",
             "Swerve",
             "Omniwheel",
             "Mechanum",
             "ETC."});
-            this.cmbType.Location = new System.Drawing.Point(298, 63);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(199, 46);
-            this.cmbType.TabIndex = 5;
-            this.cmbType.Text = "Pick One";
+            this.cmb_Info_DtType.Location = new System.Drawing.Point(220, 47);
+            this.cmb_Info_DtType.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Info_DtType.Name = "cmb_Info_DtType";
+            this.cmb_Info_DtType.Size = new System.Drawing.Size(141, 37);
+            this.cmb_Info_DtType.TabIndex = 5;
+            this.cmb_Info_DtType.SelectedIndexChanged += new System.EventHandler(this.btn_Display_Submit_Validate);
             // 
-            // btnImport
+            // btn_Display_Import
             // 
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.Location = new System.Drawing.Point(991, 4);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(223, 122);
-            this.btnImport.TabIndex = 6;
-            this.btnImport.Text = "Import";
-            this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btn_Display_Import.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Display_Import.Location = new System.Drawing.Point(2, 2);
+            this.btn_Display_Import.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Display_Import.Name = "btn_Display_Import";
+            this.btn_Display_Import.Size = new System.Drawing.Size(162, 91);
+            this.btn_Display_Import.TabIndex = 6;
+            this.btn_Display_Import.Text = "Import";
+            this.btn_Display_Import.UseVisualStyleBackColor = true;
+            this.btn_Display_Import.Click += new System.EventHandler(this.btn_Display_Import_Click);
             // 
-            // pbRobot
+            // pb_Display_Robot
             // 
-            this.pbRobot.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pbRobot.Location = new System.Drawing.Point(1220, 6);
-            this.pbRobot.Name = "pbRobot";
-            this.pbRobot.Size = new System.Drawing.Size(250, 250);
-            this.pbRobot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbRobot.TabIndex = 7;
-            this.pbRobot.TabStop = false;
+            this.pb_Display_Robot.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pb_Display_Robot.Location = new System.Drawing.Point(167, 2);
+            this.pb_Display_Robot.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_Display_Robot.Name = "pb_Display_Robot";
+            this.pb_Display_Robot.Size = new System.Drawing.Size(188, 203);
+            this.pb_Display_Robot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Display_Robot.TabIndex = 7;
+            this.pb_Display_Robot.TabStop = false;
             // 
-            // panel1
+            // pnl_Auto
             // 
-            this.panel1.Controls.Add(this.ckb_Community);
-            this.panel1.Controls.Add(this.ckb_Floor);
-            this.panel1.Controls.Add(this.ckb_Preloaded);
-            this.panel1.Controls.Add(this.txt_AutoNotes);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.cmb_AutoCharge);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(12, 167);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(485, 574);
-            this.panel1.TabIndex = 8;
+            this.pnl_Auto.Controls.Add(this.lbl_Auto_Name);
+            this.pnl_Auto.Controls.Add(this.ckb_Auto_Preloaded);
+            this.pnl_Auto.Controls.Add(this.ckb_Auto_Floor);
+            this.pnl_Auto.Controls.Add(this.ckb_Auto_Community);
+            this.pnl_Auto.Controls.Add(this.lbl_Auto_Station);
+            this.pnl_Auto.Controls.Add(this.cmb_Auto_Station);
+            this.pnl_Auto.Controls.Add(this.lbl_Auto_Notes);
+            this.pnl_Auto.Controls.Add(this.tb_Auto_Notes);
+            this.pnl_Auto.Location = new System.Drawing.Point(9, 149);
+            this.pnl_Auto.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_Auto.Name = "pnl_Auto";
+            this.pnl_Auto.Size = new System.Drawing.Size(364, 453);
+            this.pnl_Auto.TabIndex = 8;
             // 
-            // ckb_Community
+            // lbl_Auto_Name
             // 
-            this.ckb_Community.AutoSize = true;
-            this.ckb_Community.Checked = true;
-            this.ckb_Community.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_Community.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Community.Location = new System.Drawing.Point(0, 156);
-            this.ckb_Community.Name = "ckb_Community";
-            this.ckb_Community.Size = new System.Drawing.Size(447, 41);
-            this.ckb_Community.TabIndex = 17;
-            this.ckb_Community.Text = "Can it leave the Community?";
-            this.ckb_Community.UseVisualStyleBackColor = true;
+            this.lbl_Auto_Name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Auto_Name.AutoSize = true;
+            this.lbl_Auto_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Auto_Name.Location = new System.Drawing.Point(4, 17);
+            this.lbl_Auto_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Auto_Name.Name = "lbl_Auto_Name";
+            this.lbl_Auto_Name.Size = new System.Drawing.Size(87, 39);
+            this.lbl_Auto_Name.TabIndex = 11;
+            this.lbl_Auto_Name.Text = "Auto";
+            this.lbl_Auto_Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ckb_Floor
+            // ckb_Auto_Preloaded
             // 
-            this.ckb_Floor.AutoSize = true;
-            this.ckb_Floor.Checked = true;
-            this.ckb_Floor.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_Floor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Floor.Location = new System.Drawing.Point(0, 112);
-            this.ckb_Floor.Name = "ckb_Floor";
-            this.ckb_Floor.Size = new System.Drawing.Size(385, 41);
-            this.ckb_Floor.TabIndex = 16;
-            this.ckb_Floor.Text = "Score pieces from floor?";
-            this.ckb_Floor.UseVisualStyleBackColor = true;
+            this.ckb_Auto_Preloaded.AutoSize = true;
+            this.ckb_Auto_Preloaded.Checked = true;
+            this.ckb_Auto_Preloaded.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_Auto_Preloaded.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_Auto_Preloaded.Location = new System.Drawing.Point(9, 58);
+            this.ckb_Auto_Preloaded.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_Auto_Preloaded.Name = "ckb_Auto_Preloaded";
+            this.ckb_Auto_Preloaded.Size = new System.Drawing.Size(314, 34);
+            this.ckb_Auto_Preloaded.TabIndex = 15;
+            this.ckb_Auto_Preloaded.Text = "Score preloaded pieces?";
+            this.ckb_Auto_Preloaded.UseVisualStyleBackColor = true;
             // 
-            // ckb_Preloaded
+            // ckb_Auto_Floor
             // 
-            this.ckb_Preloaded.AutoSize = true;
-            this.ckb_Preloaded.Checked = true;
-            this.ckb_Preloaded.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_Preloaded.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Preloaded.Location = new System.Drawing.Point(0, 72);
-            this.ckb_Preloaded.Name = "ckb_Preloaded";
-            this.ckb_Preloaded.Size = new System.Drawing.Size(390, 41);
-            this.ckb_Preloaded.TabIndex = 15;
-            this.ckb_Preloaded.Text = "Score preloaded pieces?";
-            this.ckb_Preloaded.UseVisualStyleBackColor = true;
+            this.ckb_Auto_Floor.AutoSize = true;
+            this.ckb_Auto_Floor.Checked = true;
+            this.ckb_Auto_Floor.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_Auto_Floor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_Auto_Floor.Location = new System.Drawing.Point(9, 91);
+            this.ckb_Auto_Floor.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_Auto_Floor.Name = "ckb_Auto_Floor";
+            this.ckb_Auto_Floor.Size = new System.Drawing.Size(310, 34);
+            this.ckb_Auto_Floor.TabIndex = 16;
+            this.ckb_Auto_Floor.Text = "Score pieces from floor?";
+            this.ckb_Auto_Floor.UseVisualStyleBackColor = true;
             // 
-            // txt_AutoNotes
+            // ckb_Auto_Community
             // 
-            this.txt_AutoNotes.Location = new System.Drawing.Point(3, 354);
-            this.txt_AutoNotes.Multiline = true;
-            this.txt_AutoNotes.Name = "txt_AutoNotes";
-            this.txt_AutoNotes.Size = new System.Drawing.Size(479, 217);
-            this.txt_AutoNotes.TabIndex = 14;
+            this.ckb_Auto_Community.AutoSize = true;
+            this.ckb_Auto_Community.Checked = true;
+            this.ckb_Auto_Community.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_Auto_Community.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_Auto_Community.Location = new System.Drawing.Point(9, 127);
+            this.ckb_Auto_Community.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_Auto_Community.Name = "ckb_Auto_Community";
+            this.ckb_Auto_Community.Size = new System.Drawing.Size(341, 34);
+            this.ckb_Auto_Community.TabIndex = 17;
+            this.ckb_Auto_Community.Text = "Can leave the Community?";
+            this.ckb_Auto_Community.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lbl_Auto_Station
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 303);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(238, 48);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Auto Notes:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_Auto_Station.AutoSize = true;
+            this.lbl_Auto_Station.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Auto_Station.Location = new System.Drawing.Point(4, 160);
+            this.lbl_Auto_Station.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Auto_Station.Name = "lbl_Auto_Station";
+            this.lbl_Auto_Station.Size = new System.Drawing.Size(220, 31);
+            this.lbl_Auto_Station.TabIndex = 11;
+            this.lbl_Auto_Station.Text = "Charging station:";
             // 
-            // label5
+            // cmb_Auto_Station
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(274, 39);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Charging station:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // cmb_AutoCharge
-            // 
-            this.cmb_AutoCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_AutoCharge.FormattingEnabled = true;
-            this.cmb_AutoCharge.Items.AddRange(new object[] {
+            this.cmb_Auto_Station.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Auto_Station.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Auto_Station.FormattingEnabled = true;
+            this.cmb_Auto_Station.Items.AddRange(new object[] {
             "Not Docked",
             "Docked !& Engaged",
             "Docked && Engaged"});
-            this.cmb_AutoCharge.Location = new System.Drawing.Point(0, 239);
-            this.cmb_AutoCharge.Name = "cmb_AutoCharge";
-            this.cmb_AutoCharge.Size = new System.Drawing.Size(475, 46);
-            this.cmb_AutoCharge.TabIndex = 11;
-            this.cmb_AutoCharge.Text = "Pick One";
+            this.cmb_Auto_Station.Location = new System.Drawing.Point(7, 194);
+            this.cmb_Auto_Station.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_Auto_Station.Name = "cmb_Auto_Station";
+            this.cmb_Auto_Station.Size = new System.Drawing.Size(351, 39);
+            this.cmb_Auto_Station.TabIndex = 11;
             // 
-            // label4
+            // lbl_Auto_Notes
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(182, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 48);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Auto";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_Auto_Notes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Auto_Notes.AutoSize = true;
+            this.lbl_Auto_Notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Auto_Notes.Location = new System.Drawing.Point(4, 246);
+            this.lbl_Auto_Notes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Auto_Notes.Name = "lbl_Auto_Notes";
+            this.lbl_Auto_Notes.Size = new System.Drawing.Size(194, 39);
+            this.lbl_Auto_Notes.TabIndex = 13;
+            this.lbl_Auto_Notes.Text = "Auto Notes:";
+            this.lbl_Auto_Notes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel2
+            // tb_Auto_Notes
             // 
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.ckb_InShelf);
-            this.panel2.Controls.Add(this.ckb_InFloor);
-            this.panel2.Controls.Add(this.ckb_Mid);
-            this.panel2.Controls.Add(this.ckb_Low);
-            this.panel2.Controls.Add(this.ckb_High);
-            this.panel2.Controls.Add(this.txt_TeleOpNotes);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.ckb_Pieces);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(503, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(485, 732);
-            this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.tb_Auto_Notes.Location = new System.Drawing.Point(2, 288);
+            this.tb_Auto_Notes.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_Auto_Notes.Multiline = true;
+            this.tb_Auto_Notes.Name = "tb_Auto_Notes";
+            this.tb_Auto_Notes.Size = new System.Drawing.Size(359, 163);
+            this.tb_Auto_Notes.TabIndex = 14;
             // 
-            // ckb_InShelf
+            // pnl_TeleOp
             // 
-            this.ckb_InShelf.AutoSize = true;
-            this.ckb_InShelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_InShelf.Location = new System.Drawing.Point(344, 322);
-            this.ckb_InShelf.Name = "ckb_InShelf";
-            this.ckb_InShelf.Size = new System.Drawing.Size(117, 43);
-            this.ckb_InShelf.TabIndex = 26;
-            this.ckb_InShelf.Text = "Shelf";
-            this.ckb_InShelf.UseVisualStyleBackColor = true;
+            this.pnl_TeleOp.Controls.Add(this.lbl_TeleOp_Name);
+            this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_Pieces);
+            this.pnl_TeleOp.Controls.Add(this.lbl_TeleOp_Station);
+            this.pnl_TeleOp.Controls.Add(this.cmb_TeleOp_Station);
+            this.pnl_TeleOp.Controls.Add(this.lbl_TeleOp_Scores);
+            this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_High);
+            this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_Mid);
+            this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_Low);
+            this.pnl_TeleOp.Controls.Add(this.lbl_TeleOp_Intake);
+            this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_InFloor);
+            this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_InShelf);
+            this.pnl_TeleOp.Controls.Add(this.lbl_TeleOp_Notes);
+            this.pnl_TeleOp.Controls.Add(this.tb_TeleOp_Notes);
+            this.pnl_TeleOp.Location = new System.Drawing.Point(377, 5);
+            this.pnl_TeleOp.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_TeleOp.Name = "pnl_TeleOp";
+            this.pnl_TeleOp.Size = new System.Drawing.Size(364, 597);
+            this.pnl_TeleOp.TabIndex = 9;
             // 
-            // ckb_InFloor
+            // lbl_TeleOp_Name
             // 
-            this.ckb_InFloor.AutoSize = true;
-            this.ckb_InFloor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_InFloor.Location = new System.Drawing.Point(344, 273);
-            this.ckb_InFloor.Name = "ckb_InFloor";
-            this.ckb_InFloor.Size = new System.Drawing.Size(117, 43);
-            this.ckb_InFloor.TabIndex = 25;
-            this.ckb_InFloor.Text = "Floor";
-            this.ckb_InFloor.UseVisualStyleBackColor = true;
+            this.lbl_TeleOp_Name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_TeleOp_Name.AutoSize = true;
+            this.lbl_TeleOp_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TeleOp_Name.Location = new System.Drawing.Point(8, 6);
+            this.lbl_TeleOp_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TeleOp_Name.Name = "lbl_TeleOp_Name";
+            this.lbl_TeleOp_Name.Size = new System.Drawing.Size(140, 39);
+            this.lbl_TeleOp_Name.TabIndex = 12;
+            this.lbl_TeleOp_Name.Text = "Tele-Op";
+            this.lbl_TeleOp_Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ckb_Mid
+            // ckb_TeleOp_Pieces
             // 
-            this.ckb_Mid.AutoSize = true;
-            this.ckb_Mid.Checked = true;
-            this.ckb_Mid.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_Mid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Mid.Location = new System.Drawing.Point(19, 317);
-            this.ckb_Mid.Name = "ckb_Mid";
-            this.ckb_Mid.Size = new System.Drawing.Size(94, 43);
-            this.ckb_Mid.TabIndex = 24;
-            this.ckb_Mid.Text = "Mid";
-            this.ckb_Mid.UseVisualStyleBackColor = true;
+            this.ckb_TeleOp_Pieces.AutoSize = true;
+            this.ckb_TeleOp_Pieces.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_TeleOp_Pieces.Location = new System.Drawing.Point(68, 65);
+            this.ckb_TeleOp_Pieces.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_TeleOp_Pieces.Name = "ckb_TeleOp_Pieces";
+            this.ckb_TeleOp_Pieces.Size = new System.Drawing.Size(205, 35);
+            this.ckb_TeleOp_Pieces.TabIndex = 13;
+            this.ckb_TeleOp_Pieces.Text = "Score pieces?";
+            this.ckb_TeleOp_Pieces.UseVisualStyleBackColor = true;
             // 
-            // ckb_Low
+            // lbl_TeleOp_Station
             // 
-            this.ckb_Low.AutoSize = true;
-            this.ckb_Low.Checked = true;
-            this.ckb_Low.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_Low.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Low.Location = new System.Drawing.Point(19, 354);
-            this.ckb_Low.Name = "ckb_Low";
-            this.ckb_Low.Size = new System.Drawing.Size(102, 43);
-            this.ckb_Low.TabIndex = 23;
-            this.ckb_Low.Text = "Low";
-            this.ckb_Low.UseVisualStyleBackColor = true;
+            this.lbl_TeleOp_Station.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_TeleOp_Station.AutoSize = true;
+            this.lbl_TeleOp_Station.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TeleOp_Station.Location = new System.Drawing.Point(2, 102);
+            this.lbl_TeleOp_Station.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TeleOp_Station.Name = "lbl_TeleOp_Station";
+            this.lbl_TeleOp_Station.Size = new System.Drawing.Size(280, 39);
+            this.lbl_TeleOp_Station.TabIndex = 14;
+            this.lbl_TeleOp_Station.Text = "Charging Station:";
+            this.lbl_TeleOp_Station.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ckb_High
+            // cmb_TeleOp_Station
             // 
-            this.ckb_High.AutoSize = true;
-            this.ckb_High.Checked = true;
-            this.ckb_High.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckb_High.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_High.Location = new System.Drawing.Point(19, 273);
-            this.ckb_High.Name = "ckb_High";
-            this.ckb_High.Size = new System.Drawing.Size(110, 43);
-            this.ckb_High.TabIndex = 22;
-            this.ckb_High.Text = "High";
-            this.ckb_High.UseVisualStyleBackColor = true;
+            this.cmb_TeleOp_Station.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_TeleOp_Station.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_TeleOp_Station.FormattingEnabled = true;
+            this.cmb_TeleOp_Station.Items.AddRange(new object[] {
+            "Not Docked",
+            "Docked !& Engaged",
+            "Docked && Engaged"});
+            this.cmb_TeleOp_Station.Location = new System.Drawing.Point(2, 144);
+            this.cmb_TeleOp_Station.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_TeleOp_Station.Name = "cmb_TeleOp_Station";
+            this.cmb_TeleOp_Station.Size = new System.Drawing.Size(357, 39);
+            this.cmb_TeleOp_Station.TabIndex = 18;
             // 
-            // txt_TeleOpNotes
+            // lbl_TeleOp_Scores
             // 
-            this.txt_TeleOpNotes.Location = new System.Drawing.Point(3, 471);
-            this.txt_TeleOpNotes.Multiline = true;
-            this.txt_TeleOpNotes.Name = "txt_TeleOpNotes";
-            this.txt_TeleOpNotes.Size = new System.Drawing.Size(479, 258);
-            this.txt_TeleOpNotes.TabIndex = 21;
+            this.lbl_TeleOp_Scores.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_TeleOp_Scores.AutoSize = true;
+            this.lbl_TeleOp_Scores.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TeleOp_Scores.Location = new System.Drawing.Point(8, 184);
+            this.lbl_TeleOp_Scores.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TeleOp_Scores.Name = "lbl_TeleOp_Scores";
+            this.lbl_TeleOp_Scores.Size = new System.Drawing.Size(132, 39);
+            this.lbl_TeleOp_Scores.TabIndex = 16;
+            this.lbl_TeleOp_Scores.Text = "Scores:";
+            this.lbl_TeleOp_Scores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label11
+            // ckb_TeleOp_High
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 420);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(304, 48);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Tele-Op Notes:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ckb_TeleOp_High.AutoSize = true;
+            this.ckb_TeleOp_High.Checked = true;
+            this.ckb_TeleOp_High.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_TeleOp_High.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_TeleOp_High.Location = new System.Drawing.Point(14, 225);
+            this.ckb_TeleOp_High.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_TeleOp_High.Name = "ckb_TeleOp_High";
+            this.ckb_TeleOp_High.Size = new System.Drawing.Size(89, 35);
+            this.ckb_TeleOp_High.TabIndex = 22;
+            this.ckb_TeleOp_High.Text = "High";
+            this.ckb_TeleOp_High.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // ckb_TeleOp_Mid
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(336, 226);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 48);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Intake:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ckb_TeleOp_Mid.AutoSize = true;
+            this.ckb_TeleOp_Mid.Checked = true;
+            this.ckb_TeleOp_Mid.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_TeleOp_Mid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_TeleOp_Mid.Location = new System.Drawing.Point(14, 258);
+            this.ckb_TeleOp_Mid.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_TeleOp_Mid.Name = "ckb_TeleOp_Mid";
+            this.ckb_TeleOp_Mid.Size = new System.Drawing.Size(76, 35);
+            this.ckb_TeleOp_Mid.TabIndex = 24;
+            this.ckb_TeleOp_Mid.Text = "Mid";
+            this.ckb_TeleOp_Mid.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // ckb_TeleOp_Low
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 226);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(162, 48);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Scores:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ckb_TeleOp_Low.AutoSize = true;
+            this.ckb_TeleOp_Low.Checked = true;
+            this.ckb_TeleOp_Low.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ckb_TeleOp_Low.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_TeleOp_Low.Location = new System.Drawing.Point(14, 288);
+            this.ckb_TeleOp_Low.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_TeleOp_Low.Name = "ckb_TeleOp_Low";
+            this.ckb_TeleOp_Low.Size = new System.Drawing.Size(83, 35);
+            this.ckb_TeleOp_Low.TabIndex = 23;
+            this.ckb_TeleOp_Low.Text = "Low";
+            this.ckb_TeleOp_Low.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // lbl_TeleOp_Intake
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(343, 48);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Charging Station:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_TeleOp_Intake.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_TeleOp_Intake.AutoSize = true;
+            this.lbl_TeleOp_Intake.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TeleOp_Intake.Location = new System.Drawing.Point(234, 185);
+            this.lbl_TeleOp_Intake.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TeleOp_Intake.Name = "lbl_TeleOp_Intake";
+            this.lbl_TeleOp_Intake.Size = new System.Drawing.Size(119, 39);
+            this.lbl_TeleOp_Intake.TabIndex = 19;
+            this.lbl_TeleOp_Intake.Text = "Intake:";
+            this.lbl_TeleOp_Intake.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ckb_Pieces
+            // ckb_TeleOp_InFloor
             // 
-            this.ckb_Pieces.AutoSize = true;
-            this.ckb_Pieces.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_Pieces.Location = new System.Drawing.Point(91, 80);
-            this.ckb_Pieces.Name = "ckb_Pieces";
-            this.ckb_Pieces.Size = new System.Drawing.Size(255, 43);
-            this.ckb_Pieces.TabIndex = 13;
-            this.ckb_Pieces.Text = "Score pieces?";
-            this.ckb_Pieces.UseVisualStyleBackColor = true;
+            this.ckb_TeleOp_InFloor.AutoSize = true;
+            this.ckb_TeleOp_InFloor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_TeleOp_InFloor.Location = new System.Drawing.Point(241, 222);
+            this.ckb_TeleOp_InFloor.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_TeleOp_InFloor.Name = "ckb_TeleOp_InFloor";
+            this.ckb_TeleOp_InFloor.Size = new System.Drawing.Size(95, 35);
+            this.ckb_TeleOp_InFloor.TabIndex = 25;
+            this.ckb_TeleOp_InFloor.Text = "Floor";
+            this.ckb_TeleOp_InFloor.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // ckb_TeleOp_InShelf
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(143, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(172, 48);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Tele-Op";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.ckb_TeleOp_InShelf.AutoSize = true;
+            this.ckb_TeleOp_InShelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_TeleOp_InShelf.Location = new System.Drawing.Point(241, 261);
+            this.ckb_TeleOp_InShelf.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_TeleOp_InShelf.Name = "ckb_TeleOp_InShelf";
+            this.ckb_TeleOp_InShelf.Size = new System.Drawing.Size(95, 35);
+            this.ckb_TeleOp_InShelf.TabIndex = 26;
+            this.ckb_TeleOp_InShelf.Text = "Shelf";
+            this.ckb_TeleOp_InShelf.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // lbl_TeleOp_Notes
             // 
-            this.panel3.Controls.Add(this.ckb_LEDs);
-            this.panel3.Controls.Add(this.ckb_AI);
-            this.panel3.Controls.Add(this.txt_OtherNotes);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Location = new System.Drawing.Point(994, 262);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(476, 479);
-            this.panel3.TabIndex = 10;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.lbl_TeleOp_Notes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_TeleOp_Notes.AutoSize = true;
+            this.lbl_TeleOp_Notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TeleOp_Notes.Location = new System.Drawing.Point(2, 341);
+            this.lbl_TeleOp_Notes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_TeleOp_Notes.Name = "lbl_TeleOp_Notes";
+            this.lbl_TeleOp_Notes.Size = new System.Drawing.Size(247, 39);
+            this.lbl_TeleOp_Notes.TabIndex = 20;
+            this.lbl_TeleOp_Notes.Text = "Tele-Op Notes:";
+            this.lbl_TeleOp_Notes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ckb_LEDs
+            // tb_TeleOp_Notes
             // 
-            this.ckb_LEDs.AutoSize = true;
-            this.ckb_LEDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_LEDs.Location = new System.Drawing.Point(22, 110);
-            this.ckb_LEDs.Name = "ckb_LEDs";
-            this.ckb_LEDs.Size = new System.Drawing.Size(142, 43);
-            this.ckb_LEDs.TabIndex = 28;
-            this.ckb_LEDs.Text = "LEDs?";
-            this.ckb_LEDs.UseVisualStyleBackColor = true;
+            this.tb_TeleOp_Notes.Location = new System.Drawing.Point(2, 383);
+            this.tb_TeleOp_Notes.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_TeleOp_Notes.Multiline = true;
+            this.tb_TeleOp_Notes.Name = "tb_TeleOp_Notes";
+            this.tb_TeleOp_Notes.Size = new System.Drawing.Size(360, 210);
+            this.tb_TeleOp_Notes.TabIndex = 21;
             // 
-            // ckb_AI
+            // pnl_OtherInfo
             // 
-            this.ckb_AI.AutoSize = true;
-            this.ckb_AI.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckb_AI.Location = new System.Drawing.Point(22, 61);
-            this.ckb_AI.Name = "ckb_AI";
-            this.ckb_AI.Size = new System.Drawing.Size(265, 43);
-            this.ckb_AI.TabIndex = 27;
-            this.ckb_AI.Text = "AI Assistence?";
-            this.ckb_AI.UseVisualStyleBackColor = true;
+            this.pnl_OtherInfo.Controls.Add(this.lbl_OtherInfo_Name);
+            this.pnl_OtherInfo.Controls.Add(this.ckb_OtherInfo_AI);
+            this.pnl_OtherInfo.Controls.Add(this.ckb_OtherInfo_LEDs);
+            this.pnl_OtherInfo.Controls.Add(this.lbl_OtherInfo_Notes);
+            this.pnl_OtherInfo.Controls.Add(this.tb_OtherInfo_Notes);
+            this.pnl_OtherInfo.Location = new System.Drawing.Point(746, 213);
+            this.pnl_OtherInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_OtherInfo.Name = "pnl_OtherInfo";
+            this.pnl_OtherInfo.Size = new System.Drawing.Size(357, 389);
+            this.pnl_OtherInfo.TabIndex = 10;
             // 
-            // txt_OtherNotes
+            // lbl_OtherInfo_Name
             // 
-            this.txt_OtherNotes.Location = new System.Drawing.Point(3, 215);
-            this.txt_OtherNotes.Multiline = true;
-            this.txt_OtherNotes.Name = "txt_OtherNotes";
-            this.txt_OtherNotes.Size = new System.Drawing.Size(470, 258);
-            this.txt_OtherNotes.TabIndex = 23;
+            this.lbl_OtherInfo_Name.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_OtherInfo_Name.AutoSize = true;
+            this.lbl_OtherInfo_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_OtherInfo_Name.Location = new System.Drawing.Point(10, 8);
+            this.lbl_OtherInfo_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_OtherInfo_Name.Name = "lbl_OtherInfo_Name";
+            this.lbl_OtherInfo_Name.Size = new System.Drawing.Size(167, 39);
+            this.lbl_OtherInfo_Name.TabIndex = 13;
+            this.lbl_OtherInfo_Name.Text = "Other Info";
+            this.lbl_OtherInfo_Name.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label14
+            // ckb_OtherInfo_AI
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(14, 154);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(340, 48);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Any Other Notes:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ckb_OtherInfo_AI.AutoSize = true;
+            this.ckb_OtherInfo_AI.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_OtherInfo_AI.Location = new System.Drawing.Point(16, 50);
+            this.ckb_OtherInfo_AI.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_OtherInfo_AI.Name = "ckb_OtherInfo_AI";
+            this.ckb_OtherInfo_AI.Size = new System.Drawing.Size(214, 35);
+            this.ckb_OtherInfo_AI.TabIndex = 27;
+            this.ckb_OtherInfo_AI.Text = "AI Assistence?";
+            this.ckb_OtherInfo_AI.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // ckb_OtherInfo_LEDs
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(14, 10);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(206, 48);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Other Info";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ckb_OtherInfo_LEDs.AutoSize = true;
+            this.ckb_OtherInfo_LEDs.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_OtherInfo_LEDs.Location = new System.Drawing.Point(16, 89);
+            this.ckb_OtherInfo_LEDs.Margin = new System.Windows.Forms.Padding(2);
+            this.ckb_OtherInfo_LEDs.Name = "ckb_OtherInfo_LEDs";
+            this.ckb_OtherInfo_LEDs.Size = new System.Drawing.Size(115, 35);
+            this.ckb_OtherInfo_LEDs.TabIndex = 28;
+            this.ckb_OtherInfo_LEDs.Text = "LEDs?";
+            this.ckb_OtherInfo_LEDs.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // lbl_OtherInfo_Notes
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(991, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(223, 124);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lbl_OtherInfo_Notes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_OtherInfo_Notes.AutoSize = true;
+            this.lbl_OtherInfo_Notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_OtherInfo_Notes.Location = new System.Drawing.Point(10, 125);
+            this.lbl_OtherInfo_Notes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_OtherInfo_Notes.Name = "lbl_OtherInfo_Notes";
+            this.lbl_OtherInfo_Notes.Size = new System.Drawing.Size(276, 39);
+            this.lbl_OtherInfo_Notes.TabIndex = 22;
+            this.lbl_OtherInfo_Notes.Text = "Any Other Notes:";
+            this.lbl_OtherInfo_Notes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // tb_OtherInfo_Notes
+            // 
+            this.tb_OtherInfo_Notes.Location = new System.Drawing.Point(2, 175);
+            this.tb_OtherInfo_Notes.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_OtherInfo_Notes.Multiline = true;
+            this.tb_OtherInfo_Notes.Name = "tb_OtherInfo_Notes";
+            this.tb_OtherInfo_Notes.Size = new System.Drawing.Size(354, 210);
+            this.tb_OtherInfo_Notes.TabIndex = 23;
+            // 
+            // btn_Display_Submit
+            // 
+            this.btn_Display_Submit.Enabled = false;
+            this.btn_Display_Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Display_Submit.Location = new System.Drawing.Point(2, 113);
+            this.btn_Display_Submit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Display_Submit.Name = "btn_Display_Submit";
+            this.btn_Display_Submit.Size = new System.Drawing.Size(162, 91);
+            this.btn_Display_Submit.TabIndex = 11;
+            this.btn_Display_Submit.Text = "Submit";
+            this.btn_Display_Submit.UseVisualStyleBackColor = true;
+            this.btn_Display_Submit.Click += new System.EventHandler(this.btn_Display_Submit_Click);
             // 
             // ofd_Import
             // 
             this.ofd_Import.FileName = "openFileDialog1";
             this.ofd_Import.FileOk += new System.ComponentModel.CancelEventHandler(this.ofd_Import_FileOk);
             // 
-            // tmrCheck
+            // pnl_Info
             // 
-            this.tmrCheck.Enabled = true;
-            this.tmrCheck.Tick += new System.EventHandler(this.tmrCheck_Tick);
+            this.pnl_Info.Controls.Add(this.lbl_Info_TeamNumber);
+            this.pnl_Info.Controls.Add(this.lbl_Info_DtType);
+            this.pnl_Info.Controls.Add(this.lbl_Info_DtMotor);
+            this.pnl_Info.Controls.Add(this.tb_Info_TeamNumber);
+            this.pnl_Info.Controls.Add(this.cmb_Info_DtType);
+            this.pnl_Info.Controls.Add(this.cmb_Info_DtMotor);
+            this.pnl_Info.Location = new System.Drawing.Point(9, 3);
+            this.pnl_Info.Name = "pnl_Info";
+            this.pnl_Info.Size = new System.Drawing.Size(365, 143);
+            this.pnl_Info.TabIndex = 12;
             // 
-            // comboBox1
+            // pnl_Display
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Not Docked",
-            "Docked !& Engaged",
-            "Docked && Engaged"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(475, 46);
-            this.comboBox1.TabIndex = 18;
+            this.pnl_Display.Controls.Add(this.btn_Display_Import);
+            this.pnl_Display.Controls.Add(this.btn_Display_Submit);
+            this.pnl_Display.Controls.Add(this.pb_Display_Robot);
+            this.pnl_Display.Location = new System.Drawing.Point(746, 5);
+            this.pnl_Display.Name = "pnl_Display";
+            this.pnl_Display.Size = new System.Drawing.Size(357, 207);
+            this.pnl_Display.TabIndex = 13;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 753);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pbRobot);
-            this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.cmbType);
-            this.Controls.Add(this.cmbMotor);
-            this.Controls.Add(this.txtNumber);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1112, 612);
+            this.Controls.Add(this.pnl_Info);
+            this.Controls.Add(this.pnl_Auto);
+            this.Controls.Add(this.pnl_TeleOp);
+            this.Controls.Add(this.pnl_Display);
+            this.Controls.Add(this.pnl_OtherInfo);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Pit Scouting";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbRobot)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Display_Robot)).EndInit();
+            this.pnl_Auto.ResumeLayout(false);
+            this.pnl_Auto.PerformLayout();
+            this.pnl_TeleOp.ResumeLayout(false);
+            this.pnl_TeleOp.PerformLayout();
+            this.pnl_OtherInfo.ResumeLayout(false);
+            this.pnl_OtherInfo.PerformLayout();
+            this.pnl_Info.ResumeLayout(false);
+            this.pnl_Info.PerformLayout();
+            this.pnl_Display.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNumber;
-        private System.Windows.Forms.ComboBox cmbMotor;
-        private System.Windows.Forms.ComboBox cmbType;
-        private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.PictureBox pbRobot;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_AutoNotes;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmb_AutoCharge;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox ckb_Pieces;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_TeleOpNotes;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txt_OtherNotes;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_Info_TeamNumber;
+        private System.Windows.Forms.Label lbl_Info_DtType;
+        private System.Windows.Forms.Label lbl_Info_DtMotor;
+        private System.Windows.Forms.TextBox tb_Info_TeamNumber;
+        private System.Windows.Forms.ComboBox cmb_Info_DtMotor;
+        private System.Windows.Forms.ComboBox cmb_Info_DtType;
+        private System.Windows.Forms.Button btn_Display_Import;
+        private System.Windows.Forms.PictureBox pb_Display_Robot;
+        private System.Windows.Forms.Panel pnl_Auto;
+        private System.Windows.Forms.Panel pnl_TeleOp;
+        private System.Windows.Forms.Panel pnl_OtherInfo;
+        private System.Windows.Forms.Label lbl_Auto_Name;
+        private System.Windows.Forms.TextBox tb_Auto_Notes;
+        private System.Windows.Forms.Label lbl_Auto_Notes;
+        private System.Windows.Forms.Label lbl_Auto_Station;
+        private System.Windows.Forms.ComboBox cmb_Auto_Station;
+        private System.Windows.Forms.Label lbl_TeleOp_Scores;
+        private System.Windows.Forms.Label lbl_TeleOp_Station;
+        private System.Windows.Forms.CheckBox ckb_TeleOp_Pieces;
+        private System.Windows.Forms.Label lbl_TeleOp_Name;
+        private System.Windows.Forms.TextBox tb_TeleOp_Notes;
+        private System.Windows.Forms.Label lbl_TeleOp_Notes;
+        private System.Windows.Forms.Label lbl_TeleOp_Intake;
+        private System.Windows.Forms.Label lbl_OtherInfo_Name;
+        private System.Windows.Forms.Button btn_Display_Submit;
+        private System.Windows.Forms.TextBox tb_OtherInfo_Notes;
+        private System.Windows.Forms.Label lbl_OtherInfo_Notes;
         private System.Windows.Forms.OpenFileDialog ofd_Import;
         private System.Windows.Forms.SaveFileDialog sfd_Submit;
-        private System.Windows.Forms.CheckBox ckb_Community;
-        private System.Windows.Forms.CheckBox ckb_Floor;
-        private System.Windows.Forms.CheckBox ckb_Preloaded;
-        private System.Windows.Forms.CheckBox ckb_InShelf;
-        private System.Windows.Forms.CheckBox ckb_InFloor;
-        private System.Windows.Forms.CheckBox ckb_Mid;
-        private System.Windows.Forms.CheckBox ckb_Low;
-        private System.Windows.Forms.CheckBox ckb_High;
-        private System.Windows.Forms.CheckBox ckb_LEDs;
-        private System.Windows.Forms.CheckBox ckb_AI;
-        private System.Windows.Forms.Timer tmrCheck;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox ckb_Auto_Community;
+        private System.Windows.Forms.CheckBox ckb_Auto_Floor;
+        private System.Windows.Forms.CheckBox ckb_Auto_Preloaded;
+        private System.Windows.Forms.CheckBox ckb_TeleOp_InShelf;
+        private System.Windows.Forms.CheckBox ckb_TeleOp_InFloor;
+        private System.Windows.Forms.CheckBox ckb_TeleOp_Mid;
+        private System.Windows.Forms.CheckBox ckb_TeleOp_Low;
+        private System.Windows.Forms.CheckBox ckb_TeleOp_High;
+        private System.Windows.Forms.CheckBox ckb_OtherInfo_LEDs;
+        private System.Windows.Forms.CheckBox ckb_OtherInfo_AI;
+        private System.Windows.Forms.ComboBox cmb_TeleOp_Station;
+        private System.Windows.Forms.Panel pnl_Info;
+        private System.Windows.Forms.Panel pnl_Display;
     }
 }
 
