@@ -31,7 +31,7 @@
             this.lbl_Info_TeamNumber = new System.Windows.Forms.Label();
             this.lbl_Info_DtType = new System.Windows.Forms.Label();
             this.lbl_Info_DtMotor = new System.Windows.Forms.Label();
-            this.tb_Info_TeamNumber = new System.Windows.Forms.TextBox();
+            this.txt_Info_TeamNumber = new System.Windows.Forms.TextBox();
             this.cmb_Info_DtMotor = new System.Windows.Forms.ComboBox();
             this.cmb_Info_DtType = new System.Windows.Forms.ComboBox();
             this.btn_Display_Import = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.lbl_Auto_Station = new System.Windows.Forms.Label();
             this.cmb_Auto_Station = new System.Windows.Forms.ComboBox();
             this.lbl_Auto_Notes = new System.Windows.Forms.Label();
-            this.tb_Auto_Notes = new System.Windows.Forms.TextBox();
+            this.txt_Auto_Notes = new System.Windows.Forms.TextBox();
             this.pnl_TeleOp = new System.Windows.Forms.Panel();
             this.lbl_TeleOp_Name = new System.Windows.Forms.Label();
             this.ckb_TeleOp_Pieces = new System.Windows.Forms.CheckBox();
@@ -58,13 +58,13 @@
             this.ckb_TeleOp_InFloor = new System.Windows.Forms.CheckBox();
             this.ckb_TeleOp_InShelf = new System.Windows.Forms.CheckBox();
             this.lbl_TeleOp_Notes = new System.Windows.Forms.Label();
-            this.tb_TeleOp_Notes = new System.Windows.Forms.TextBox();
+            this.txt_TeleOp_Notes = new System.Windows.Forms.TextBox();
             this.pnl_OtherInfo = new System.Windows.Forms.Panel();
             this.lbl_OtherInfo_Name = new System.Windows.Forms.Label();
             this.ckb_OtherInfo_AI = new System.Windows.Forms.CheckBox();
             this.ckb_OtherInfo_LEDs = new System.Windows.Forms.CheckBox();
             this.lbl_OtherInfo_Notes = new System.Windows.Forms.Label();
-            this.tb_OtherInfo_Notes = new System.Windows.Forms.TextBox();
+            this.txt_OtherInfo_Notes = new System.Windows.Forms.TextBox();
             this.btn_Display_Submit = new System.Windows.Forms.Button();
             this.ofd_Import = new System.Windows.Forms.OpenFileDialog();
             this.sfd_Submit = new System.Windows.Forms.SaveFileDialog();
@@ -111,16 +111,15 @@
             this.lbl_Info_DtMotor.TabIndex = 2;
             this.lbl_Info_DtMotor.Text = "Drivetrain Motor:";
             // 
-            // tb_Info_TeamNumber
+            // txt_Info_TeamNumber
             // 
-            this.tb_Info_TeamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Info_TeamNumber.Location = new System.Drawing.Point(220, 8);
-            this.tb_Info_TeamNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_Info_TeamNumber.Name = "tb_Info_TeamNumber";
-            this.tb_Info_TeamNumber.Size = new System.Drawing.Size(92, 35);
-            this.tb_Info_TeamNumber.TabIndex = 3;
-            this.tb_Info_TeamNumber.Text = "6498";
-            this.tb_Info_TeamNumber.TextChanged += new System.EventHandler(this.btn_Display_Submit_Validate);
+            this.txt_Info_TeamNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Info_TeamNumber.Location = new System.Drawing.Point(220, 8);
+            this.txt_Info_TeamNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Info_TeamNumber.Name = "txt_Info_TeamNumber";
+            this.txt_Info_TeamNumber.Size = new System.Drawing.Size(92, 35);
+            this.txt_Info_TeamNumber.TabIndex = 3;
+            this.txt_Info_TeamNumber.TextChanged += new System.EventHandler(this.btn_Display_Submit_Validate);
             // 
             // cmb_Info_DtMotor
             // 
@@ -190,7 +189,7 @@
             this.pnl_Auto.Controls.Add(this.lbl_Auto_Station);
             this.pnl_Auto.Controls.Add(this.cmb_Auto_Station);
             this.pnl_Auto.Controls.Add(this.lbl_Auto_Notes);
-            this.pnl_Auto.Controls.Add(this.tb_Auto_Notes);
+            this.pnl_Auto.Controls.Add(this.txt_Auto_Notes);
             this.pnl_Auto.Location = new System.Drawing.Point(9, 149);
             this.pnl_Auto.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Auto.Name = "pnl_Auto";
@@ -213,8 +212,6 @@
             // ckb_Auto_Preloaded
             // 
             this.ckb_Auto_Preloaded.AutoSize = true;
-            this.ckb_Auto_Preloaded.Checked = true;
-            this.ckb_Auto_Preloaded.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckb_Auto_Preloaded.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckb_Auto_Preloaded.Location = new System.Drawing.Point(9, 58);
             this.ckb_Auto_Preloaded.Margin = new System.Windows.Forms.Padding(2);
@@ -227,8 +224,6 @@
             // ckb_Auto_Floor
             // 
             this.ckb_Auto_Floor.AutoSize = true;
-            this.ckb_Auto_Floor.Checked = true;
-            this.ckb_Auto_Floor.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckb_Auto_Floor.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckb_Auto_Floor.Location = new System.Drawing.Point(9, 91);
             this.ckb_Auto_Floor.Margin = new System.Windows.Forms.Padding(2);
@@ -241,8 +236,6 @@
             // ckb_Auto_Community
             // 
             this.ckb_Auto_Community.AutoSize = true;
-            this.ckb_Auto_Community.Checked = true;
-            this.ckb_Auto_Community.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckb_Auto_Community.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckb_Auto_Community.Location = new System.Drawing.Point(9, 127);
             this.ckb_Auto_Community.Margin = new System.Windows.Forms.Padding(2);
@@ -277,6 +270,7 @@
             this.cmb_Auto_Station.Name = "cmb_Auto_Station";
             this.cmb_Auto_Station.Size = new System.Drawing.Size(351, 39);
             this.cmb_Auto_Station.TabIndex = 11;
+            this.cmb_Auto_Station.SelectedIndexChanged += new System.EventHandler(this.cmb_Auto_Station_SelectedIndexChanged);
             // 
             // lbl_Auto_Notes
             // 
@@ -291,14 +285,14 @@
             this.lbl_Auto_Notes.Text = "Auto Notes:";
             this.lbl_Auto_Notes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tb_Auto_Notes
+            // txt_Auto_Notes
             // 
-            this.tb_Auto_Notes.Location = new System.Drawing.Point(2, 288);
-            this.tb_Auto_Notes.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_Auto_Notes.Multiline = true;
-            this.tb_Auto_Notes.Name = "tb_Auto_Notes";
-            this.tb_Auto_Notes.Size = new System.Drawing.Size(359, 163);
-            this.tb_Auto_Notes.TabIndex = 14;
+            this.txt_Auto_Notes.Location = new System.Drawing.Point(2, 288);
+            this.txt_Auto_Notes.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Auto_Notes.Multiline = true;
+            this.txt_Auto_Notes.Name = "txt_Auto_Notes";
+            this.txt_Auto_Notes.Size = new System.Drawing.Size(359, 163);
+            this.txt_Auto_Notes.TabIndex = 14;
             // 
             // pnl_TeleOp
             // 
@@ -314,7 +308,7 @@
             this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_InFloor);
             this.pnl_TeleOp.Controls.Add(this.ckb_TeleOp_InShelf);
             this.pnl_TeleOp.Controls.Add(this.lbl_TeleOp_Notes);
-            this.pnl_TeleOp.Controls.Add(this.tb_TeleOp_Notes);
+            this.pnl_TeleOp.Controls.Add(this.txt_TeleOp_Notes);
             this.pnl_TeleOp.Location = new System.Drawing.Point(377, 5);
             this.pnl_TeleOp.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_TeleOp.Name = "pnl_TeleOp";
@@ -373,6 +367,7 @@
             this.cmb_TeleOp_Station.Name = "cmb_TeleOp_Station";
             this.cmb_TeleOp_Station.Size = new System.Drawing.Size(357, 39);
             this.cmb_TeleOp_Station.TabIndex = 18;
+            this.cmb_TeleOp_Station.SelectedValueChanged += new System.EventHandler(this.cmb_TeleOp_Station_SelectedValueChanged);
             // 
             // lbl_TeleOp_Scores
             // 
@@ -390,8 +385,6 @@
             // ckb_TeleOp_High
             // 
             this.ckb_TeleOp_High.AutoSize = true;
-            this.ckb_TeleOp_High.Checked = true;
-            this.ckb_TeleOp_High.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckb_TeleOp_High.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckb_TeleOp_High.Location = new System.Drawing.Point(14, 225);
             this.ckb_TeleOp_High.Margin = new System.Windows.Forms.Padding(2);
@@ -404,8 +397,6 @@
             // ckb_TeleOp_Mid
             // 
             this.ckb_TeleOp_Mid.AutoSize = true;
-            this.ckb_TeleOp_Mid.Checked = true;
-            this.ckb_TeleOp_Mid.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckb_TeleOp_Mid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckb_TeleOp_Mid.Location = new System.Drawing.Point(14, 258);
             this.ckb_TeleOp_Mid.Margin = new System.Windows.Forms.Padding(2);
@@ -418,8 +409,6 @@
             // ckb_TeleOp_Low
             // 
             this.ckb_TeleOp_Low.AutoSize = true;
-            this.ckb_TeleOp_Low.Checked = true;
-            this.ckb_TeleOp_Low.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckb_TeleOp_Low.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckb_TeleOp_Low.Location = new System.Drawing.Point(14, 288);
             this.ckb_TeleOp_Low.Margin = new System.Windows.Forms.Padding(2);
@@ -479,14 +468,14 @@
             this.lbl_TeleOp_Notes.Text = "Tele-Op Notes:";
             this.lbl_TeleOp_Notes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tb_TeleOp_Notes
+            // txt_TeleOp_Notes
             // 
-            this.tb_TeleOp_Notes.Location = new System.Drawing.Point(2, 383);
-            this.tb_TeleOp_Notes.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_TeleOp_Notes.Multiline = true;
-            this.tb_TeleOp_Notes.Name = "tb_TeleOp_Notes";
-            this.tb_TeleOp_Notes.Size = new System.Drawing.Size(360, 210);
-            this.tb_TeleOp_Notes.TabIndex = 21;
+            this.txt_TeleOp_Notes.Location = new System.Drawing.Point(2, 383);
+            this.txt_TeleOp_Notes.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_TeleOp_Notes.Multiline = true;
+            this.txt_TeleOp_Notes.Name = "txt_TeleOp_Notes";
+            this.txt_TeleOp_Notes.Size = new System.Drawing.Size(360, 210);
+            this.txt_TeleOp_Notes.TabIndex = 21;
             // 
             // pnl_OtherInfo
             // 
@@ -494,7 +483,7 @@
             this.pnl_OtherInfo.Controls.Add(this.ckb_OtherInfo_AI);
             this.pnl_OtherInfo.Controls.Add(this.ckb_OtherInfo_LEDs);
             this.pnl_OtherInfo.Controls.Add(this.lbl_OtherInfo_Notes);
-            this.pnl_OtherInfo.Controls.Add(this.tb_OtherInfo_Notes);
+            this.pnl_OtherInfo.Controls.Add(this.txt_OtherInfo_Notes);
             this.pnl_OtherInfo.Location = new System.Drawing.Point(746, 213);
             this.pnl_OtherInfo.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_OtherInfo.Name = "pnl_OtherInfo";
@@ -551,14 +540,14 @@
             this.lbl_OtherInfo_Notes.Text = "Any Other Notes:";
             this.lbl_OtherInfo_Notes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tb_OtherInfo_Notes
+            // txt_OtherInfo_Notes
             // 
-            this.tb_OtherInfo_Notes.Location = new System.Drawing.Point(2, 175);
-            this.tb_OtherInfo_Notes.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_OtherInfo_Notes.Multiline = true;
-            this.tb_OtherInfo_Notes.Name = "tb_OtherInfo_Notes";
-            this.tb_OtherInfo_Notes.Size = new System.Drawing.Size(354, 210);
-            this.tb_OtherInfo_Notes.TabIndex = 23;
+            this.txt_OtherInfo_Notes.Location = new System.Drawing.Point(2, 175);
+            this.txt_OtherInfo_Notes.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_OtherInfo_Notes.Multiline = true;
+            this.txt_OtherInfo_Notes.Name = "txt_OtherInfo_Notes";
+            this.txt_OtherInfo_Notes.Size = new System.Drawing.Size(354, 210);
+            this.txt_OtherInfo_Notes.TabIndex = 23;
             // 
             // btn_Display_Submit
             // 
@@ -583,7 +572,7 @@
             this.pnl_Info.Controls.Add(this.lbl_Info_TeamNumber);
             this.pnl_Info.Controls.Add(this.lbl_Info_DtType);
             this.pnl_Info.Controls.Add(this.lbl_Info_DtMotor);
-            this.pnl_Info.Controls.Add(this.tb_Info_TeamNumber);
+            this.pnl_Info.Controls.Add(this.txt_Info_TeamNumber);
             this.pnl_Info.Controls.Add(this.cmb_Info_DtType);
             this.pnl_Info.Controls.Add(this.cmb_Info_DtMotor);
             this.pnl_Info.Location = new System.Drawing.Point(9, 3);
@@ -611,10 +600,12 @@
             this.Controls.Add(this.pnl_TeleOp);
             this.Controls.Add(this.pnl_Display);
             this.Controls.Add(this.pnl_OtherInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Pit Scouting";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Display_Robot)).EndInit();
             this.pnl_Auto.ResumeLayout(false);
             this.pnl_Auto.PerformLayout();
@@ -631,10 +622,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_Info_TeamNumber;
-        private System.Windows.Forms.Label lbl_Info_DtType;
+        public System.Windows.Forms.Label lbl_Info_TeamNumber;
+        public System.Windows.Forms.Label lbl_Info_DtType;
         private System.Windows.Forms.Label lbl_Info_DtMotor;
-        private System.Windows.Forms.TextBox tb_Info_TeamNumber;
+        private System.Windows.Forms.TextBox txt_Info_TeamNumber;
         private System.Windows.Forms.ComboBox cmb_Info_DtMotor;
         private System.Windows.Forms.ComboBox cmb_Info_DtType;
         private System.Windows.Forms.Button btn_Display_Import;
@@ -643,7 +634,7 @@
         private System.Windows.Forms.Panel pnl_TeleOp;
         private System.Windows.Forms.Panel pnl_OtherInfo;
         private System.Windows.Forms.Label lbl_Auto_Name;
-        private System.Windows.Forms.TextBox tb_Auto_Notes;
+        private System.Windows.Forms.TextBox txt_Auto_Notes;
         private System.Windows.Forms.Label lbl_Auto_Notes;
         private System.Windows.Forms.Label lbl_Auto_Station;
         private System.Windows.Forms.ComboBox cmb_Auto_Station;
@@ -651,16 +642,16 @@
         private System.Windows.Forms.Label lbl_TeleOp_Station;
         private System.Windows.Forms.CheckBox ckb_TeleOp_Pieces;
         private System.Windows.Forms.Label lbl_TeleOp_Name;
-        private System.Windows.Forms.TextBox tb_TeleOp_Notes;
+        private System.Windows.Forms.TextBox txt_TeleOp_Notes;
         private System.Windows.Forms.Label lbl_TeleOp_Notes;
         private System.Windows.Forms.Label lbl_TeleOp_Intake;
         private System.Windows.Forms.Label lbl_OtherInfo_Name;
         private System.Windows.Forms.Button btn_Display_Submit;
-        private System.Windows.Forms.TextBox tb_OtherInfo_Notes;
+        private System.Windows.Forms.TextBox txt_OtherInfo_Notes;
         private System.Windows.Forms.Label lbl_OtherInfo_Notes;
         private System.Windows.Forms.OpenFileDialog ofd_Import;
         private System.Windows.Forms.SaveFileDialog sfd_Submit;
-        private System.Windows.Forms.CheckBox ckb_Auto_Community;
+        public System.Windows.Forms.CheckBox ckb_Auto_Community;
         private System.Windows.Forms.CheckBox ckb_Auto_Floor;
         private System.Windows.Forms.CheckBox ckb_Auto_Preloaded;
         private System.Windows.Forms.CheckBox ckb_TeleOp_InShelf;
