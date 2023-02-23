@@ -1,7 +1,6 @@
 ﻿using PdfSharp.Drawing;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.Annotations;
-using PdfSharp.Pdf.IO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -131,9 +130,7 @@ namespace PitScouting2023
                 strings[i] = "";
             }
             #endregion
-            #region put window in random spot >:)
-            this.Location = new System.Drawing.Point(Rnd.Next(420), Rnd.Next(180));
-            #endregion
+            RandomWindow();
         }
         public void EditorResponse(string fileName, string word, string replacement, string saveFileName)
         {
@@ -171,18 +168,34 @@ namespace PitScouting2023
         }
         private void Import()
         {
-            PdfSharp.Pdf.PdfDocument PDFDoc = PdfReader.Open("testFile.pdf", PdfDocumentOpenMode.Import);
+            //defines the doc
+            PdfSharp.Pdf.PdfDocument PDFDoc = new PdfSharp.Pdf.PdfDocument("testFile.pdf");
+            //define new doc
             PdfSharp.Pdf.PdfDocument PDFNewDoc = new PdfSharp.Pdf.PdfDocument();
             for (int Pg = 0; Pg < PDFDoc.Pages.Count; Pg++)
             {
+                //add page
                 PDFNewDoc.AddPage(PDFDoc.Pages[Pg]);
             }
+            //save Doc
             PDFNewDoc.Save("resultFile.PDF");
+        }
+        public static bool ContainsSubPath(string pathToFile, string subPath)
+        {
+            // Define Main-Path
+            pathToFile = Path.GetDirectoryName(pathToFile) + "\\";
+            // Define Target-Path
+            string searchPath = Path.GetDirectoryName(subPath) + "\\";
+            // See if there is a match
+            bool containsIt = pathToFile.IndexOf(searchPath, StringComparison.OrdinalIgnoreCase) > -1;
+            // Return results
+            return containsIt;
         }
         private void ofd_Import_FileOk(object sender, CancelEventArgs e)
         {
             //Load picture in the picturebox
             pb_Display_Robot.Load(@ofd_Import.FileName);
+            // Force Check
             btn_Display_Submit_Validate(sender, e);
         }
 
@@ -195,12 +208,15 @@ namespace PitScouting2023
             allNums = true;
             try
             {
+                // See if only contains digets (ie; [0-9])
                 Convert.ToInt16(txt_Info_TeamNumber.Text);
             }
             catch
             {
+                // Set to false if catches an error
                 allNums = false;
             }
+            // Check if all requirements are met
             btn_Display_Submit.Enabled = (allNums && !(string.IsNullOrWhiteSpace(txt_Info_TeamNumber.Text) || cmb_Info_DtMotor.SelectedIndex == -1 || cmb_Info_DtType.SelectedIndex == -1 || cmb_Auto_Station.SelectedIndex == -1 || cmb_TeleOp_Station.SelectedIndex == -1 || pb_Display_Robot.Image == null));
         }
         #endregion
@@ -275,6 +291,10 @@ namespace PitScouting2023
             Notes.Add((TextBox)txt_OtherInfo_Notes);
             Notes.Add((TextBox)txt_TeleOp_Notes);
             #endregion
+            RandomWindow();
+        }
+        public void RandomWindow()
+        {
             #region put window in random spot >:)
             //int max x = (desktop screen size) - this.size
             this.Location = new System.Drawing.Point(Rnd.Next(420), Rnd.Next(180));
@@ -283,17 +303,19 @@ namespace PitScouting2023
 
         private void cmb_Auto_Station_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Force Check
             btn_Display_Submit_Validate(sender, e);
         }
 
         private void cmb_TeleOp_Station_SelectedValueChanged(object sender, EventArgs e)
         {
+            // Force Check
             btn_Display_Submit_Validate(sender, e);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Import();
+
         }
     }
 }
