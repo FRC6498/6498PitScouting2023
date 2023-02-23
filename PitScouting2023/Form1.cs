@@ -1,8 +1,13 @@
-﻿using System;
+﻿using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.Annotations;
+using PdfSharp.Pdf.IO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Resources;
 using System.Security.Policy;
@@ -98,6 +103,7 @@ namespace PitScouting2023
 
         private void btn_Display_Submit_Click(object sender, EventArgs e)
         {
+            CreatePDF();
             //Show dialog box to confirm submission
             //sfd_Submit.ShowDialog();
             #region Reset Inputs
@@ -128,13 +134,51 @@ namespace PitScouting2023
             #region put window in random spot >:)
             this.Location = new System.Drawing.Point(Rnd.Next(420), Rnd.Next(180));
             #endregion
+        }
+        public void EditorResponse(string fileName, string word, string replacement, string saveFileName)
+        {
+            StreamReader reader = new StreamReader(Directory.GetCurrentDirectory() + fileName);
+            string input = reader.ReadToEnd();
+        }
+        public void CreatePDF()
+        {
+            // Create a new PDF document
+            PdfDocument pdfDocument = new PdfDocument();
+            // Create an empty page
+            PdfPage pdfPage = pdfDocument.AddPage();
+            // Get an XGraphics object for drawing
+            XGraphics xGraphics = XGraphics.FromPdfPage(pdfPage);
+            // Create a font
+            XFont xFont = new XFont("Verdana", 20, XFontStyle.BoldItalic);
+            // Draw the text
+            xGraphics.DrawString("File Format Developer Guide", xFont, XBrushes.Black, new XRect(0, 0, pdfPage.Width, pdfPage.Height), XStringFormats.Center);
+            // Save the document...
+            pdfDocument.Save("fileformat.pdf");
+        }
+        public void AnnotatePdf()
+        {
+            // Create a PDF text annotation
+            PdfTextAnnotation textAnnot = new PdfTextAnnotation();
+            textAnnot.Title = "This is the title";
+            textAnnot.Subject = "This is the subject";
+            textAnnot.Contents = "This is the contents of the annotation.\rThis is the 2nd line.";
+            textAnnot.Icon = PdfTextAnnotationIcon.Note;
 
         }
         private void valueChange_updae(object sender, EventArgs e)
         {
 
         }
-
+        private void Import()
+        {
+            PdfSharp.Pdf.PdfDocument PDFDoc = PdfReader.Open("testFile.pdf", PdfDocumentOpenMode.Import);
+            PdfSharp.Pdf.PdfDocument PDFNewDoc = new PdfSharp.Pdf.PdfDocument();
+            for (int Pg = 0; Pg < PDFDoc.Pages.Count; Pg++)
+            {
+                PDFNewDoc.AddPage(PDFDoc.Pages[Pg]);
+            }
+            PDFNewDoc.Save("resultFile.PDF");
+        }
         private void ofd_Import_FileOk(object sender, CancelEventArgs e)
         {
             //Load picture in the picturebox
@@ -245,6 +289,11 @@ namespace PitScouting2023
         private void cmb_TeleOp_Station_SelectedValueChanged(object sender, EventArgs e)
         {
             btn_Display_Submit_Validate(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Import();
         }
     }
 }
