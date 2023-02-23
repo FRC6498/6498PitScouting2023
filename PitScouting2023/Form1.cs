@@ -232,6 +232,7 @@ namespace PitScouting2023
             Notes.Add((TextBox)txt_TeleOp_Notes);
             #endregion
             #region put window in random spot >:)
+            //int max x = (desktop screen size) - this.size
             this.Location = new System.Drawing.Point(Rnd.Next(420), Rnd.Next(180));
             #endregion
         }
