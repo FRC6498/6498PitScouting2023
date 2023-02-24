@@ -37,6 +37,7 @@
             this.btn_Display_Import = new System.Windows.Forms.Button();
             this.pb_Display_Robot = new System.Windows.Forms.PictureBox();
             this.pnl_Auto = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lbl_Auto_Name = new System.Windows.Forms.Label();
             this.ckb_Auto_Preloaded = new System.Windows.Forms.CheckBox();
             this.ckb_Auto_Floor = new System.Windows.Forms.CheckBox();
@@ -70,7 +71,6 @@
             this.sfd_Submit = new System.Windows.Forms.SaveFileDialog();
             this.pnl_Info = new System.Windows.Forms.Panel();
             this.pnl_Display = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Display_Robot)).BeginInit();
             this.pnl_Auto.SuspendLayout();
             this.pnl_TeleOp.SuspendLayout();
@@ -194,6 +194,16 @@
             this.pnl_Auto.Name = "pnl_Auto";
             this.pnl_Auto.Size = new System.Drawing.Size(485, 558);
             this.pnl_Auto.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(195, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Use Random Data";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbl_Auto_Name
             // 
@@ -565,7 +575,7 @@
             this.pnl_Info.Controls.Add(this.cmb_Info_DtType);
             this.pnl_Info.Controls.Add(this.cmb_Info_DtMotor);
             this.pnl_Info.Location = new System.Drawing.Point(12, 4);
-            this.pnl_Info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Info.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Info.Name = "pnl_Info";
             this.pnl_Info.Size = new System.Drawing.Size(487, 176);
             this.pnl_Info.TabIndex = 12;
@@ -576,20 +586,10 @@
             this.pnl_Display.Controls.Add(this.btn_Display_Submit);
             this.pnl_Display.Controls.Add(this.pb_Display_Robot);
             this.pnl_Display.Location = new System.Drawing.Point(995, 6);
-            this.pnl_Display.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Display.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Display.Name = "pnl_Display";
             this.pnl_Display.Size = new System.Drawing.Size(476, 255);
             this.pnl_Display.TabIndex = 13;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(195, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

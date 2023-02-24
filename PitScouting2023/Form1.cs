@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Resources;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -209,7 +210,7 @@ namespace PitScouting2023
             try
             {
                 // See if only contains digets (ie; [0-9])
-                Convert.ToInt16(txt_Info_TeamNumber.Text);
+                Convert.ToInt64(txt_Info_TeamNumber.Text);
             }
             catch
             {
@@ -315,7 +316,26 @@ namespace PitScouting2023
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            txt_Info_TeamNumber.Text = Rnd.Next(1000000).ToString("00000");
+            String Image = "C:\\Users\\FRC6498\\Desktop\\OIP.jfif";
+            pb_Display_Robot.Load(@Image);
+            cmb_Auto_Station.SelectedIndex= Rnd.Next(cmb_Auto_Station.Items.Count);
+            cmb_Info_DtMotor.SelectedIndex= Rnd.Next(cmb_Info_DtMotor.Items.Count);
+            cmb_Info_DtType.SelectedIndex=Rnd.Next(cmb_Info_DtType.Items.Count);
+            cmb_TeleOp_Station.SelectedIndex=Rnd.Next(cmb_TeleOp_Station.Items.Count);
+            for(int i = 0; i < Checks.Count; i++)
+            {
+                if (Rnd.Next(2) == 1)
+                {
+                    Checks[i].Checked = true;
+                }
+                else
+                {
+                    Checks[i].Checked = false;
+                }
+            }
+            // Force Check
+            btn_Display_Submit_Validate(sender, e);
         }
     }
 }
