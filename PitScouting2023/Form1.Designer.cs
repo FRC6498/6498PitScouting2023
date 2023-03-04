@@ -601,7 +601,7 @@
             this.Controls.Add(this.pnl_TeleOp);
             this.Controls.Add(this.pnl_Display);
             this.Controls.Add(this.pnl_OtherInfo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";

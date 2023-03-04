@@ -1,18 +1,10 @@
-﻿using PdfSharp.Drawing;
-using PdfSharp.Pdf;
-using PdfSharp.Pdf.Annotations;
+﻿using PdfSharp.Pdf.Annotations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Resources;
-using System.Security.Cryptography;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PitScouting2023
@@ -103,9 +95,48 @@ namespace PitScouting2023
 
         private void btn_Display_Submit_Click(object sender, EventArgs e)
         {
-            CreatePDF();
+            //btn_Display_Submit_Validate(sender, e);
+            //Graphics bmp1 = CreateBitMap();
+            //Bitmap bmp2 = new Bitmap(this.Width, this.Height, bmp1);
+            //bmp1.Save(@"c:\Desktop\FRC"+TeamNumber+".bmp", System.Drawing.Imaging.ImageFormat.Bmp);
             //Show dialog box to confirm submission
-            //sfd_Submit.ShowDialog();
+
+            //sfd_Submit.Filter = "Images|*.jpg ; ; *.png ; *.bmp";
+            //if (sfd_Submit.ShowDialog() == DialogResult.OK)
+            //{
+            //    switch (sfd_Submit.Filter)
+            //    {
+            //        case ".jpg"
+            //    }
+            //}
+
+            
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\PitScouting\";
+            String Number = TeamNumber.ToString();
+            string fileName = @"\FRC-" + Number + ".bmp";
+            DirectoryInfo di = Directory.CreateDirectory(filePath);
+            string fullFileName = filePath + fileName;
+
+            //bmp2.Save(fullFileName);
+
+            Rectangle bounds = new Rectangle();
+            // print location
+            bounds.Size = new Size(1505, 804);
+            bounds.Location = new Point(this.Location.X, this.Location.Y);
+            Console.Out.WriteLine("Rectangle: " + bounds);
+            Console.Out.WriteLine("Form: " + this.Location + this.Size);
+
+            using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
+            {
+                using (Graphics g = Graphics.FromImage(bitmap))
+                {
+                    g.CopyFromScreen(new Point(this.Location.X, this.Location.Y), Point.Empty, new Size(1505, 804));
+                    Console.Out.WriteLine("Bit-Map: " + bitmap);
+                    Console.Out.WriteLine("g.CopyFromScreen: ( Location: " + this.Location + ", " + Point.Empty + ", Size: " + this.Size + ")");
+                }
+                bitmap.Save(fullFileName, ImageFormat.Bmp);
+            }
+
             #region Reset Inputs
             for (int i = 0; i < Checks.Count; i++)
             {
@@ -131,27 +162,29 @@ namespace PitScouting2023
                 strings[i] = "";
             }
             #endregion
-            RandomWindow();
         }
         public void EditorResponse(string fileName, string word, string replacement, string saveFileName)
         {
             StreamReader reader = new StreamReader(Directory.GetCurrentDirectory() + fileName);
             string input = reader.ReadToEnd();
         }
-        public void CreatePDF()
+        public Graphics CreateBitMap()
         {
-            // Create a new PDF document
-            PdfDocument pdfDocument = new PdfDocument();
-            // Create an empty page
-            PdfPage pdfPage = pdfDocument.AddPage();
-            // Get an XGraphics object for drawing
-            XGraphics xGraphics = XGraphics.FromPdfPage(pdfPage);
-            // Create a font
-            XFont xFont = new XFont("Verdana", 20, XFontStyle.BoldItalic);
-            // Draw the text
-            xGraphics.DrawString("File Format Developer Guide", xFont, XBrushes.Black, new XRect(0, 0, pdfPage.Width, pdfPage.Height), XStringFormats.Center);
-            // Save the document...
-            pdfDocument.Save("fileformat.pdf");
+            //using (Bitmap bmpScreenCapture = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height))
+            //using (Graphics g = Graphics.FromImage(bmpScreenCapture))
+            //{
+            //    g.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, bmpScreenCapture.Size, CopyPixelOperation.SourceCopy);
+            //    return bmpScreenCapture;
+            //}
+
+            Bitmap memoryImage = new Bitmap(this.Width, this.Height);
+            Size s = new Size(memoryImage.Width, memoryImage.Height);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+
+
+            return memoryGraphics;
         }
         public void AnnotatePdf()
         {
@@ -210,7 +243,7 @@ namespace PitScouting2023
             try
             {
                 // See if only contains digets (ie; [0-9])
-                Convert.ToInt64(txt_Info_TeamNumber.Text);
+                Convert.ToInt32(txt_Info_TeamNumber.Text);
             }
             catch
             {
@@ -292,8 +325,10 @@ namespace PitScouting2023
             Notes.Add((TextBox)txt_OtherInfo_Notes);
             Notes.Add((TextBox)txt_TeleOp_Notes);
             #endregion
-            RandomWindow();
-        }
+            #region Set size
+            this.Size = new Size(1132, 655);
+        #endregion
+    }
         public void RandomWindow()
         {
             #region put window in random spot >:)
@@ -316,13 +351,15 @@ namespace PitScouting2023
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txt_Info_TeamNumber.Text = Rnd.Next(1000000).ToString("00000");
+            int Number = Rnd.Next(32767);
+            txt_Info_TeamNumber.Text = Number.ToString();
+            TeamNumber = Number;
             String Image = "C:\\Users\\FRC6498\\Desktop\\OIP.jfif";
             pb_Display_Robot.Load(@Image);
-            cmb_Auto_Station.SelectedIndex= Rnd.Next(cmb_Auto_Station.Items.Count);
-            cmb_Info_DtMotor.SelectedIndex= Rnd.Next(cmb_Info_DtMotor.Items.Count);
-            cmb_Info_DtType.SelectedIndex=Rnd.Next(cmb_Info_DtType.Items.Count);
-            cmb_TeleOp_Station.SelectedIndex=Rnd.Next(cmb_TeleOp_Station.Items.Count);
+            cmb_Auto_Station.SelectedIndex = Rnd.Next(cmb_Auto_Station.Items.Count);
+            cmb_Info_DtMotor.SelectedIndex = Rnd.Next(cmb_Info_DtMotor.Items.Count);
+            cmb_Info_DtType.SelectedIndex = Rnd.Next(cmb_Info_DtType.Items.Count);
+            cmb_TeleOp_Station.SelectedIndex = Rnd.Next(cmb_TeleOp_Station.Items.Count);
             for(int i = 0; i < Checks.Count; i++)
             {
                 if (Rnd.Next(2) == 1)
@@ -335,7 +372,7 @@ namespace PitScouting2023
                 }
             }
             // Force Check
-            btn_Display_Submit_Validate(sender, e);
+            //btn_Display_Submit_Validate(sender, e);
         }
     }
 }
